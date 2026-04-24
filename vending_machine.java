@@ -1,71 +1,94 @@
 import java.util.Scanner;
 
-public class vending_machine {
+class vending {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int total = 0;
-        char stay;
+        int TotalBill = 0;
+        int TrayNumber;
 
         do {
-            System.out.println("tray 1 | Snacks ");
-            System.out.println("tray 2 | beverages ");
-            System.out.println("tray 3 | Sweets ");
-            System.out.println("choose your tray | 1 | 2 | 3 |0(exit)");
-            int tray = sc.nextInt();
+            System.out.println("Tray 1. Beverages");
+            System.out.println("Tray 2. Snack");
+            System.out.println("Tray 3. Chocolate");
+            System.out.println("Select your Tray (1/2/3/0 to exit)");
 
-            switch(tray){
+            TrayNumber = sc.nextInt();
+
+            switch (TrayNumber) {
+
                 case 1:
-                    {System.out.println("you have chosen tray 1 which includes : ");
+                    char stay;
                     do {
-                        System.out.println("1 : Lays - Rs30");
-                        System.out.println("2 : Pringles - Rs60");
-                        System.out.println("3 : turture - Rs50");
+                        System.out.println("a. Coca Cola 40");
+                        System.out.println("b. Sprite 40");
+                        System.out.println("c. Monster 150");
+                        System.out.println("d. Redbull 100");
 
-                        int product_no = sc.nextInt();
-                        if(product_no == 1) total += 30;
-                        else if(product_no == 2) total += 60;
-                        else if(product_no == 3) total += 50;
+                        System.out.println("Select item (a/b/c/d)");
+                        char choice = sc.next().charAt(0);
 
-                        System.out.println("stay on this tray press y / exit this tray press n");
+                        if (choice == 'a') TotalBill += 40;
+                        else if (choice == 'b') TotalBill += 40;
+                        else if (choice == 'c') TotalBill += 150;
+                        else if (choice == 'd') TotalBill += 100;
+
+                        System.out.println("Stay on same tray? (y/n)");
                         stay = sc.next().charAt(0);
-                    } while(stay != n);}
+
+                    } while (stay == 'y');
                     break;
 
-                case 2:{System.out.println("you have chosen tray 2 which includes : ");
+                case 2:
                     do {
-                        System.out.println("1 : diet coke - Rs30");
-                        System.out.println("2 : Ultra kingfisher beer - Rs60");
-                        System.out.println("3 : Blenders pride - Rs50");
+                        System.out.println("a. Lays 40");
+                        System.out.println("b. Balaji 40");
+                        System.out.println("c. Bikaji 150");
+                        System.out.println("d. Kurkure 100");
 
-                        int product_no = sc.nextInt();
-                        if(product_no == 1) total += 30;
-                        else if(product_no == 2) total += 60;
-                        else if(product_no == 3) total += 50;
+                        System.out.println("Select item (a/b/c/d)");
+                        char choice = sc.next().charAt(0);
 
-                        System.out.println("stay on this tray press y / exit this tray press n");
-                         stay = sc.next().charAt(0);
-                        } while(stay != n);}
-                    break;
+                        if (choice == 'a') TotalBill += 40;
+                        else if (choice == 'b') TotalBill += 40;
+                        else if (choice == 'c') TotalBill += 150;
+                        else if (choice == 'd') TotalBill += 100;
 
-                case 3:{System.out.println("you have chosen tray 3 which includes : ");
-                    do {
-                        System.out.println("1 : Rasgulla | Rs30");
-                        System.out.println("2 : ice cream | Rs60");
-                        System.out.println("3 : Cake | Rs50");
-
-                        int product_no = sc.nextInt();
-                        if(product_no == 1) total += 30;
-                        else if(product_no == 2) total += 60;
-                        else if(product_no == 3) total += 50;
-
-                       System.out.println("stay on this tray press y / exit this tray press n");
+                        System.out.println("Stay on same tray? (y/n)");
                         stay = sc.next().charAt(0);
-                    } while(stay != n);}
+
+                    } while (stay == 'y');
                     break;
+
+                case 3:
+                    do {
+                        System.out.println("a. Dairy Milk 40");
+                        System.out.println("b. KitKat 40");
+                        System.out.println("c. Five Star 50");
+                        System.out.println("d. Perk 20");
+
+                        System.out.println("Select item (a/b/c/d)");
+                        char choice = sc.next().charAt(0);
+
+                        if (choice == 'a') TotalBill += 40;
+                        else if (choice == 'b') TotalBill += 40;
+                        else if (choice == 'c') TotalBill += 50;
+                        else if (choice == 'd') TotalBill += 20;
+
+                        System.out.println("Stay on same tray? (y/n)");
+                        stay = sc.next().charAt(0);
+
+                    } while (stay == 'y');
+                    break;
+
+                case 0:
+                    System.out.println("Exiting...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice!");
             }
 
-        } while(tray != 0);
+        } while (TrayNumber != 0);
 
-        System.out.println("Total bill = Rs" + total);
-    }
-}
+        System.out.println("Your Total bill is: " + TotalBill);
+        sc.close();
