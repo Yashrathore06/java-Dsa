@@ -92,3 +92,5 @@ class vending {
 
         System.out.println("Your Total bill is: " + TotalBill);
         sc.close();
+    }
+}
