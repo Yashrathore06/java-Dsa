@@ -30,5 +30,6 @@ public class passwordstrengthChecker {
         String pass = sc.nextLine();
         String ans = Checker(pass);
         System.out.println(ans);
+        sc.close();
      }
 }

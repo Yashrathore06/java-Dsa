@@ -14,6 +14,7 @@ public class warehouse {
             }
 
         }
-        System.out.println("Total no of products need to be restock"+total);
+        System.out.println("Total no of products need to be restock :"+total);
+        sc.close();
     }
 }

@@ -24,5 +24,6 @@ public class LoginAttemptLock {
         if(!success){
             System.out.println("Account Locked");
         }
+        sc.close();
     }
 }
