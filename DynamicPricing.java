@@ -24,5 +24,6 @@ public class DynamicPricing {
         }
 
         System.out.println("Final Price :"+Final_price);
+        sc.close();
     }
 }

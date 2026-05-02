@@ -15,5 +15,6 @@ public class OnlineCheatingSys {
         System.out.print("Idle time : ");
         int Idle_time=sc.nextInt();
         cheatingDetection(tab_switch,Idle_time);
+        sc.close();
     }
 }
